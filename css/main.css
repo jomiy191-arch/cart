@@ -20,7 +20,6 @@ body {
   padding: 40px 0;
 }
 
-/* Search input */
 #searchInput {
   transition: 0.3s ease;
 }
@@ -31,7 +30,6 @@ body {
   box-shadow: 0 0 8px var(--accent-soft);
 }
 
-/* Filter buttons */
 .filterBtn {
   padding: 8px 16px;
   margin-right: 8px;
@@ -50,7 +48,6 @@ body {
   background: var(--accent);
 }
 
-/* Product cards grid */
 #userlist {
   max-width: 1300px;
   margin: auto;
@@ -103,7 +100,6 @@ body {
   line-height: 1.45;
 }
 
-/* Category tag */
 .card p:nth-child(4) {
   background: var(--accent-soft);
   display: inline-block;
@@ -113,7 +109,6 @@ body {
   border-radius: 10px;
 }
 
-/* Price */
 .card p:nth-child(5) {
   color: var(--green);
   font-weight: 800;
@@ -138,7 +133,41 @@ body {
   transform: scale(1.1);
 }
 
-/* Responsive */
+#preloader {
+    background: url('../images/apple.jpg') center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#content {
+    text-align: center;
+    margin-top: 50px;
+}
+
 @media (max-width: 640px) {
   #userlist {
     gap: 18px;
@@ -154,7 +183,6 @@ body {
   }
 }
 
-/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0d1117;
